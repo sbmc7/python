@@ -9,15 +9,12 @@ def next_pos(i, fwd):
     else:
         return i-1;
 
-
 def nextchar_cursor(pattern):
     while True:
         for cursor in pattern:
             yield cursor
 
-
 #######- Simple spin and wait -#####################
-
 def spinner(speed, wt):
     cursor = nextchar_cursor("-/\\|")
     st = 1.0 / speed
@@ -29,7 +26,6 @@ def spinner(speed, wt):
         time.sleep(st)
 
 #######- Simple Oscillator -#####################
-
 def oscillator(speed, ln):
     cs = "_-`-" #Unit pattern
     w = 4 #Max no. of cs units
